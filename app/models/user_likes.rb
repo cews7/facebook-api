@@ -6,7 +6,7 @@ class UserLikes
 
   def self.for_user(current_user)
     FacebookService.new(current_user).user_likes.map do |raw_like|
-      UserLikes.new(raw_like).name
-    end.join(", ")
+      UserLikes.new(raw_like)
+    end
   end
 end
