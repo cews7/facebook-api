@@ -18,6 +18,10 @@ class FacebookService
     json_parse(conn.get '/v2.8/me/likes')[:data]
   end
 
+  def user_friends_count
+    json_parse(conn.get '/v2.8/me/friends')[:summary][:total_count]
+  end
+
   def json_parse(user_info)
     JSON.parse(user_info.body, symbolize_names: true)
   end

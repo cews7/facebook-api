@@ -1,24 +1,51 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "likes";
+@import "user_friends_count";
 
-.nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+.html, body {
+  background-color: #3B5998;
+}
+
+.background {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.active {
+  display: block;
+  margin: auto;
+  width: 10%;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+
+.position {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-60px;
+  margin-left:-50px;
 }

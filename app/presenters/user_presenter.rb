@@ -12,4 +12,8 @@ class UserPresenter
   def user_likes
     UserLikes.for_user(current_user)
   end
+
+  def user_friends_count
+    FacebookService.new(current_user).user_friends_count
+  end
 end
