@@ -13,4 +13,12 @@ class FacebookService
   def user_image
     @image
   end
+
+  def user_likes
+    json_parse(conn.get '/v2.8/me/likes')[:data]
+  end
+
+  def json_parse(user_info)
+    JSON.parse(user_info.body, symbolize_names: true)
+  end
 end
