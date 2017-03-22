@@ -1,0 +1,7 @@
+<div class="background">
+  <div class="likes">
+    <% @presenter.user_likes.each do |like| %>
+    <%= like.name %><br>
+    <% end %>
+  </div>
+</div>
