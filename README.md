@@ -1,24 +1,15 @@
-# README
+# Consume Facebook API  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+1. `git clone git@github.com:cews7/facebook-api.git`
 
-Things you may want to cover:
+2. `bundle`
 
-* Ruby version
+3. `rake db:setup`
 
-* System dependencies
+4. `rails s`
 
-* Configuration
+4. `rspec`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## link 
+`https://evening-island-73276.herokuapp.com/`
