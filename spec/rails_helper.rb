@@ -9,6 +9,22 @@ require 'rspec/rails'
 require 'vcr'
 require 'webmock'
 
+omniauth_hash = {
+  'provider'=> 'facebook',
+  'uid'=> '1471516409527902',
+  'info'=> {
+    'email'=> "cews7@live.com",
+    "name"=>"Eric Wahlgren-Sauro",
+    "image"=>"http://graph.facebook.com/v2.6/1471516409527902/picture"
+  },
+  'credentials'=>{
+    'token'=>"#{ENV['FACEBOOK_TOKEN']}",
+    'expires_at'=>1495494636,
+    'expires'=>true
+  },
+  }
+  OmniAuth.config.add_mock(:facebook, omniauth_hash)
+
 VCR.configure do |config|
   config.cassette_library_dir = "spec/vcr_cassettes"
   config.hook_into :webmock
@@ -29,7 +45,7 @@ end
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migration and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
